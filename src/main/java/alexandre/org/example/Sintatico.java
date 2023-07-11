@@ -1,6 +1,33 @@
 package alexandre.org.example;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sintatico {
+
+    private TabelaSimbolos tabela;
+
+    private int endereco;
+    private int contRotulo = 1;
+
+
+    private List<Registro> ultimasVariaveisDeclaradas = new ArrayList<>();
+
+
+    private String nomeArquivoSaida;
+    private String caminhoArquivoSaida;
+    private BufferedWriter bw;
+    private FileWriter fw;
+
+    private String rotulo = "";
+
+    private String rotElse;
+    
 
     private Lexico lexico;
 
